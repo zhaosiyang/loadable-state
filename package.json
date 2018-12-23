@@ -22,8 +22,5 @@
   "homepage": "https://github.com/zhaosiyang/loadable-state#readme",
   "devDependencies": {
     "typescript": "^3.2.2"
-  },
-  "dependencies": {
-    "@ngrx/store": "^7.0.0"
   }
 }
