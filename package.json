@@ -1,0 +1,29 @@
+{
+  "name": "loadable-state",
+  "version": "1.0.0",
+  "description": "Hanldle API call redux state with Loadable",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": ["lib/**/*"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaosiyang/loadable-state.git"
+  },
+  "keywords": ["loadable", "API", "redux", "ngrx", "state", "Angular"],
+  "author": "Siyang Kern Zhao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhaosiyang/loadable-state/issues"
+  },
+  "homepage": "https://github.com/zhaosiyang/loadable-state#readme",
+  "devDependencies": {
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "@ngrx/store": "^7.0.0"
+  }
+}
