@@ -1,6 +1,6 @@
 {
   "name": "loadable-state",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Hanldle API call redux state with Loadable",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
