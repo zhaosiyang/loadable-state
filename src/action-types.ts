@@ -1,5 +1,5 @@
 export interface ActionTypes {
-    loadingActionType: string;
-    successActionType: string;
-    errorActionType: string;
+    loadingActionType: string | string[];
+    successActionType: string | string[];
+    errorActionType: string | string[];
 }
