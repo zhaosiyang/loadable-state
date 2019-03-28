@@ -3,7 +3,7 @@ import {ActionTypes} from "./action-types";
 import {Action} from "./action";
 import {ReducerFunction} from "./reducer-function";
 
-export function withLoadable<T extends Loadable, U extends Action = Action>(reducer: ReducerFunction<T, U>, {loadingActionType, successActionType, errorActionType}: ActionTypes) {
+export function withLoadable<T extends Loadable, U extends Action = Action>(reducer: ReducerFunction<T, U>, {loadingActionType, successActionType, errorActionType}: ActionTypes): ReducerFunction<T, U> {
   return (state: T, action: U): T => {
     if (matchType(loadingActionType, action.type)) {
       state = onLoadableLoad(state);
@@ -20,4 +20,8 @@ export function withLoadable<T extends Loadable, U extends Action = Action>(redu
 
 function matchType(actionType: string | string[], type: string): boolean {
   return typeof actionType === 'string' ? actionType === type : actionType.indexOf(type) !== -1;
+}
+
+export function createDefaultLoadableReducer<T extends Loadable, U extends Action = Action>(actionTypes: ActionTypes): ReducerFunction<T, U> {
+  return withLoadable(_ => _, actionTypes)
 }
